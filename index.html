@@ -853,7 +853,7 @@
     </div>
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-number">3.89</div>
+        <div class="stat-number">3.87</div>
         <div class="stat-label">GPA at ASU</div>
       </div>
       <div class="stat-card">
@@ -948,12 +948,26 @@
         <span class="timeline-role">AI &amp; Data Engineer</span>
         <span class="timeline-period">Feb 2026 – Present</span>
       </div>
-      <div class="timeline-org">RVCoLab, MIX Center at Arizona State University · Tempe, AZ</div>
+      <div class="timeline-org">RVCoLab, Arizona State University · Tempe, AZ</div>
       <ul class="timeline-bullets">
-        <li>Deployed a multimodal emotion recognition system combining computer vision (OpenCV, DeepFace) and biometric signals (EEG, GSR) for real-time adaptive AI avatar behavior.</li>
-        <li>Built an end-to-end agentic voice pipeline (ASR → LLM → TTS) with LangChain tool orchestration enabling autonomous, context-aware responses.</li>
-        <li>Designed scalable GenAI data pipelines (ingestion → feature engineering → inference → LLM output) with MLflow tracking and FastAPI deployment.</li>
-        <li>Integrated real-time generative content via Stable Diffusion, reducing manual content creation effort by 40%.</li>
+        <li>Built the data backbone for a gameplay behavior research platform: synchronized 4 real-time streams (OpenFace facial capture, biosignals, Discord chat, OBS footage) at frame-accurate HH:MM:SS:FF precision so researchers could correlate emotional signals across modalities.</li>
+        <li>Wrote Python middleware that reads live biosignals and facial expressions and drives an Unreal Engine 5 AI avatar in real time, giving research participants an emotionally responsive on-screen agent at sub-50ms latency.</li>
+        <li>Integrated a WebSocket Discord bot to stream live participant chat into the avatar system, with synchronized logging across 3 concurrent sessions.</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-meta">
+        <span class="timeline-role">AI / Software Engineer Intern</span>
+        <span class="timeline-period">Nov 2025 – May 2026</span>
+      </div>
+      <div class="timeline-org">TechieGenz Softwares · Remote</div>
+      <ul class="timeline-bullets">
+        <li>Built an internal document Q&amp;A assistant for enterprise clients: employees could upload company docs and ask questions in natural language, replacing manual search across 1,800+ documents for 170+ users at ~3s response latency (LangChain, Pinecone, GPT-4o).</li>
+        <li>Automated document ingestion, chunking, and summarization via FastAPI pipelines, cutting analyst review time by 65% across 2 previously manual workflows.</li>
+        <li>Replaced keyword search with OpenAI vector embeddings for semantic retrieval; confirmed precision gains via A/B testing across query sets.</li>
+        <li>Exposed document upload, retrieval, summarization, and conversational querying through FastAPI services integrated across multiple enterprise knowledge assistants.</li>
       </ul>
     </div>
 
@@ -973,14 +987,14 @@
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-meta">
-        <span class="timeline-role">Graduate Services Assistant</span>
-        <span class="timeline-period">Oct 2024 – Jul 2025</span>
+        <span class="timeline-role">Graduate Research Assistant</span>
+        <span class="timeline-period">Oct 2024 – Dec 2025</span>
       </div>
       <div class="timeline-org">School for Engineering of Matter, Transport and Energy (SEMTE) at ASU</div>
       <ul class="timeline-bullets">
-        <li>Processed and structured 5,000+ microscopy images using OpenCV and NumPy, improving data quality by 25%.</li>
-        <li>Developed CNN-based ML models for microstructure classification, improving prediction accuracy by 16%.</li>
-        <li>Deployed production-ready ML pipeline (TensorFlow, Scikit-learn, FastAPI) achieving 92% accuracy in material property prediction.</li>
+        <li>Replaced manual material property estimation in an ASU additive manufacturing lab with a TensorFlow/Scikit-learn prediction pipeline (FastAPI) at 92% accuracy for Cu and CuNi lattice research.</li>
+        <li>Improved microstructure classification accuracy by 16% on 5,000+ SEM images through CNN architecture optimization and OpenCV/NumPy preprocessing.</li>
+        <li>Co-authored "Data-Driven Microstructure Prediction in Vat Photopolymerization-Based Metal Additive Manufacturing" (in submission).</li>
       </ul>
     </div>
 
@@ -1024,7 +1038,7 @@
     <div class="project-card">
       <div class="project-number">01</div>
       <h3 class="project-title">HabitFlow × NudgeOps</h3>
-      <p class="project-desc">Full-stack MLOps platform for personalized habit optimization. Contextual multi-armed bandit system (Thompson Sampling) using 14 behavioral features over 30-day windows to dynamically select personalized interventions.</p>
+      <p class="project-desc">Full-stack MLOps platform for personalized habit optimization. Contextual multi-armed bandit system (Thompson Sampling, UCB, Epsilon-Greedy, LinUCB) using 15 behavioral signals over 30-day windows to dynamically select from 10 nudge types.</p>
       <div class="project-stack">
         <span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">React</span>
         <span class="tag">Redis</span><span class="tag">Celery</span><span class="tag">Thompson Sampling</span>
@@ -1034,11 +1048,11 @@
     <div class="project-card">
       <div class="project-number">02</div>
       <h3 class="project-title">RAG Hallucination Firewall</h3>
-      <p class="project-desc">Low-latency RAG validation system achieving &lt;162ms retrieval across 198 research papers. Multi-stage hallucination detection pipeline (entropy + divergence + NLI) with evaluation dashboards for systematic debugging.</p>
+      <p class="project-desc">RAG firewall estimating answer reliability before responses reach users — combining semantic entropy, Jensen-Shannon divergence, and DeBERTa NLI contradiction scoring into a per-query hallucination risk score. Benchmarked on 198 research papers (1,225 chunks, Pinecone with MMR retrieval) at sub-200ms latency.</p>
       <div class="project-stack">
-        <span class="tag">LangChain</span><span class="tag">FAISS</span><span class="tag">NLI</span><span class="tag">Entropy</span>
+        <span class="tag">LangChain</span><span class="tag">Pinecone</span><span class="tag">DeBERTa</span><span class="tag">Streamlit</span>
       </div>
-      <a href="#" class="project-link">View project →</a>
+      <a href="https://github.com/swathi-2406/RAG-HallucinationFirewall" class="project-link">View project →</a>
     </div>
 
     <div class="project-card">
@@ -1053,11 +1067,11 @@
     <div class="project-card">
       <div class="project-number">04</div>
       <h3 class="project-title">Speech Recognition: Deep Learning</h3>
-      <p class="project-desc">Benchmarked 5 deep learning architectures on 100K+ audio samples, achieving 92.1% accuracy with 12ms inference latency. Robust MFCC preprocessing pipeline for generalization across noisy environments.</p>
+      <p class="project-desc">Speech command recognition for 35 voice commands trained on 105K audio samples — achieved 96.27% accuracy and 11.4ms inference latency by selecting a CNN-BiLSTM-Attention architecture over 4 alternatives. Packaged into a production inference service with 40-dim MFCC preprocessing, SpecAugment, and Gaussian noise augmentation.</p>
       <div class="project-stack">
-        <span class="tag">Deep Learning</span><span class="tag">MFCC</span><span class="tag">Audio ML</span>
+        <span class="tag">PyTorch</span><span class="tag">FastAPI</span><span class="tag">MLflow</span><span class="tag">Docker</span>
       </div>
-      <a href="#" class="project-link">View paper →</a>
+      <a href="https://github.com/swathi-2406/SpeechOps" class="project-link">View project →</a>
     </div>
 
     <div class="project-card">
@@ -1083,7 +1097,7 @@
       <div class="edu-degree">Master of Science in Computer Science</div>
       <div class="edu-school">Arizona State University</div>
       <div class="edu-meta">Tempe, AZ &nbsp;·&nbsp; Jan 2024 – Dec 2025</div>
-      <span class="edu-gpa">GPA 3.89 / 4.0</span>
+      <span class="edu-gpa">GPA 3.87 / 4.0</span>
     </div>
     <div class="edu-card">
       <div class="edu-degree">B.Tech in Artificial Intelligence</div>
@@ -1118,12 +1132,6 @@
         <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
       </div>
       <span class="contact-label">GitHub</span>
-    </a>
-    <a href="tel:+14809779936" class="contact-item">
-      <div class="contact-icon">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7 2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 6.91a16 16 0 006.72 6.72l1.15-1.15a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2z"/></svg>
-      </div>
-      <span class="contact-label">Phone</span>
     </a>
   </div>
   <a href="mailto:sgudiva3@asu.edu" class="btn btn-primary" style="margin-top:1rem;">sgudiva3@asu.edu</a>
